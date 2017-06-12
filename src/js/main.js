@@ -1,23 +1,81 @@
 $(function () {
-	$(".parallax-div").parallax(
+
+	TweenMax.from(".menu-button", 1 ,{scale:"2", yoyo: true, repeat: 4, overwrite:"none"});
+
+	//Women Who Code logo
+	TweenMax.from(".hero__wwclogo", 1.5,{scale:"3", opacity:"0", overwrite:"none"});
+
+	//Navbar
+	$(".menu-button").on("click", function () {
+		$("nav").toggleClass("open");
+	});
+
+	//ScrollTo 
+	$(".home").on("click", function () {
+		$.scrollTo($("header"), 400);
+	});
+
+	$(".scroll-to-infowindows").on("click", function () {
+		$.scrollTo($(".infowindows"), 400);
+	});
+
+	$(".scroll-to-member").on("click", function () {
+		$.scrollTo($(".data"), 400);
+	});
+
+	//Parallax
+	$(".parallax__womantyping").parallax(
 		{imageSrc: "assets/img/woman-typing.jpg"});
-	$(".parallax-div2").parallax(
+	$(".parallax__hackathon").parallax(
 		{imageSrc: "assets/img/hackathon.jpg"});
 });
 
-TweenMax.from(".wwclogo", 1.5,{scale:"2", opacity:"0", overwrite:"none"});
 
 
-TweenMax.from(".apply_button", 1.5,{rotation:"-10", overwrite:"none"});
+//Application Wiggl Button
+$(".application").waypoint(function () {
+	TweenMax.from(".button", 0.2,{rotation:"-3", yoyo: true, repeat:-1, overwrite:"none"});
+
+}, {
+	offset: '25%'
+})
+
+
+//Infowindows swipping in from sides
+$(".infowindows").waypoint(function () {
+	$('.window1').toggleClass('active');
+}, {
+	offset: '40%'
+})
+
+$(".infowindows").waypoint(function () {
+	$('.women').toggleClass('active');
+}, {
+	offset: '30%'
+})
 
 
 $(".infowindows").waypoint(function () {
-	TweenMax.from(".window1", 1.5,{left:"150px", opacity:"0", overwrite:"none"});
+	$('.window2').toggleClass('active');
 }, {
-	offset: '50%'
+	offset: '20%'
 })
 
-$(".facts").waypoint(function () {
+$(".infowindows").waypoint(function () {
+	$('.window3').toggleClass('active');
+
+}, {
+	offset: '0%'
+})
+
+$(".infowindows").waypoint(function () {
+	$('.window4').toggleClass('active');
+}, {
+	offset: '-20%'
+})
+
+//
+$(".data").waypoint(function () {
 	$(".counter").each(function() {
 	  var $this = $(this),
 	      countTo = $this.attr('data-count');
@@ -41,14 +99,15 @@ $(".facts").waypoint(function () {
 	  
 	});
 
-	TweenMax.from(".counter_parent", 1.5,{top:"-150px", opacity:"0", overwrite:"none"});
+	$('.counter_parent').toggleClass('active');
 }, {
-	offset: '50%'
+	offset: '20%'
 })
 
 
 
 
-
+	//Member Wiggle Button
+	TweenMax.from(".member_button", 0.2,{rotation:"-3", yoyo: true, repeat:-1, overwrite:"none"});
 
 

@@ -1,0 +1,157 @@
+.info {
+	display: flex;
+	flex-direction: column;
+
+	@media (min-width: $breakpoint-lg){
+		display: flex;
+		flex-direction: row; 
+	}
+
+	.infowindows {
+		margin-bottom: 5%;
+
+		.windows {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 1%;
+
+			// & .windowimage {
+			// 	width: 100%;
+			// 	background-repeat: no-repeat;
+			// }
+
+			.windowtext {
+				padding: 0% 3%;
+				padding-bottom: 10%;
+				background: #fff;
+			}
+
+			@media (min-width: $breakpoint-md){
+				display: flex;
+				flex-direction: row;
+			}
+
+			@media (min-width: $breakpoint-lg){
+				display: flex;
+				flex-direction: row;
+				width: 95%;
+			}
+		}
+
+		.window1 {
+			position: relative;
+			left: -500px;
+			opacity: 0;
+			transition: .5s all;
+
+			.image1{
+				background-image: url("../../assets/img/wwc_whoweare.png");
+				width: 200%;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: -50px;
+			}
+			&.active{
+				left:0;
+				opacity:1;
+			}
+		}
+
+		.window2 {
+			position: relative;
+			left: -500px;
+			opacity: 0;
+			transition: .5s all;
+
+			.image2{
+				background-image: url("../../assets/img/wwc_members.jpeg");
+				width: 200%;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: -50px;
+			}
+			&.active{
+				left:0;
+				opacity:1;
+			}
+		}
+
+		.window3 {
+			position: relative;
+			left: -500px;
+			opacity: 0;
+			transition: .5s all;
+
+			.image3{
+				background-image: url("../../assets/img/woman_dog.jpg");
+				width: 200%;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: -50px;
+			}
+			&.active{
+				left:0;
+				opacity:1;
+			}
+		}
+
+		.window4 {
+			position: relative;
+			left: -500px;
+			opacity: 0;
+			transition: .5s all;
+
+			.image4{
+				background-image: url("../../assets/img/pixelwomen.png");
+				width: 200%;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: -50px;
+			}
+			&.active{
+				left:0;
+				opacity:1;
+			}
+		}
+
+	}
+
+	.women {
+		background-image: url("../../assets/img/woman_looking.jpg");
+		background-repeat: no-repeat;
+		height: 800px;
+		background-position: -30px;
+		margin-bottom: 5%;
+		position: relative;
+		right: -500px;
+		opacity: 0;
+		transition: .5s all;
+
+
+		.women__text {
+			position: absolute;
+			color: #fff;
+			bottom: 0;
+			margin-left: 5%;
+			margin-bottom: 5%;
+			background: #26E8A7;
+			padding: 1% 3%;
+
+			&:hover {
+				color: #555;
+			}
+		}
+		&.active{
+			right:0;
+			opacity:1;
+		}
+
+
+
+		@media (min-width: $breakpoint-lg){
+
+			width: 100%;
+			// margin-left: 5%;
+		}
+	}
+}

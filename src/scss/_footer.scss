@@ -1,0 +1,61 @@
+footer {
+	background: #fff;
+	padding-left: 5%;	
+	color: #555;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+	width: 100%;
+
+	// .credentials {
+	// 	display: flex;
+	// 	justify-content: space-between;
+	// 	align-items: center;
+	
+	// }
+
+	span{
+		font-size: 1.5em;
+	}
+
+	& .google-logo img {
+		width: 20%;
+		margin-left: 1%;
+	}
+
+	& .wt-logo img {
+		width: 60%;
+		margin-left: 1%;
+	}
+
+	@media (min-width: $breakpoint-md){
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		& .google-logo img {
+			width: 40%;
+			margin-left: 1%;
+		}
+
+		& .wt-logo img {
+			width: 60%;
+			margin-left: 1%;
+		}
+
+
+		& span {
+			font-size: 1.5em;
+			width: 33%;
+
+		}
+	}
+
+}
+
+
+
+

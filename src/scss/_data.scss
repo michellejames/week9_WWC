@@ -1,0 +1,70 @@
+.data {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 5%;
+
+	.data__box {
+
+		display: flex;
+		flex-direction: row;
+
+		.text {
+
+			@media (min-width: $breakpoint-md){
+				max-width: 400px;
+				padding: 1% 2%;
+			}
+		}
+
+		@media (min-width: $breakpoint-md){
+			display: flex;
+			flex-direction: column;
+		}
+
+	}
+
+	@media (min-width: $breakpoint-md){
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+	}
+}
+
+.counter_parent {
+	display: flex;
+	background: #fff;
+	border-radius: 100px;
+	width: 376px;
+	height: 111px;
+	margin-right: 3%;
+	position: relative;
+	top: -500px;
+	opacity: 0;
+	transition: .8s all;
+	
+	& .counter {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+    	font-size: 1em;
+	}
+
+	@media (min-width: $breakpoint-md){
+		width: 200px;
+		height: 200px;
+		
+    	& .counter {
+			font-size: 3em;
+    	}
+	}
+	&.active{
+		top:0;
+		opacity:1;
+	}
+
+}
+
+
+
